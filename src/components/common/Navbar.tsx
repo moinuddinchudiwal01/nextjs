@@ -58,7 +58,7 @@ const Navbar = () => {
         ) : (
           <div>
             <Image
-              src='https://lh3.googleusercontent.com/a/ACg8ocI2SIWoOe0qlIdBW6Ej9L0RfN9nSjpBJKLFefxIey8BV7IXjPTa=s432-c-no'
+              src='https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=880'
               alt='Profile'
               width={40}
               height={40}
@@ -117,10 +117,22 @@ const Navbar = () => {
           </ul>
 
           <div className='flex flex-col gap-3 mt-4 items-center'>
-            <Button variant='outline' className='w-3/4'>
-              Sign In
-            </Button>
-            <Button className='w-3/4'>Sign Up</Button>
+            {true ? (
+              <>
+                <Button variant='outline' className='w-3/4'>
+                  Sign In
+                </Button>
+                <Button className='w-3/4'>Sign Up</Button>
+              </>
+            ) : (
+              <Image
+                src='https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=880'
+                alt='Profile'
+                width={40}
+                height={40}
+                className='rounded-full object-cover'
+              />
+            )}
           </div>
         </div>
       )}
